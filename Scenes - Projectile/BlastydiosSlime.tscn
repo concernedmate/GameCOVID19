@@ -1,0 +1,52 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Sprites/Blastydios.png" type="Texture" id=1]
+[ext_resource path="res://Scenes - Projectile/BlastydiosSlime.gd" type="Script" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 448, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 512, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 640, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 704, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 768, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 1 )
+region = Rect2( 832, 0, 64, 64 )
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
+"loop": false,
+"name": "default",
+"speed": 10.0
+} ]
+
+[node name="BlastydiosSlime" type="Area2D"]
+position = Vector2( -288, -80 )
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 110 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 7 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 0, 110 )
+polygon = PoolVector2Array( -60.6271, -42.2202, -38.3181, -23.9802, -39.16, -20.0515, -44.9126, -12.4749, -44.632, -0.408455, -40.2824, 2.11708, -29.3384, 2.53801, -29.619, 6.46662, -31.4431, 7.58909, -31.1624, 13.0611, -32.9864, 13.0611, -33.267, 18.954, -36.7747, 19.5152, -36.6344, 27.7934, -31.0221, 31.4414, -31.0221, 34.3879, -22.0424, 34.6685, -20.2184, 30.7399, -16.851, 31.1608, -17.25, 46.5, -15, 48, -15.25, 56, -10.75, 58, -9.25, 62.125, 0.875, 63, 2.875, 59.875, 2.625, 48.625, 0.125, 45.25, 1.875, 37.25, 6.75, 37.125, 8.625, 39.25, 25.125, 38.875, 25.375, 28.25, 30.375, 28.875, 33.5, 32.75, 46, 38.75, 51.125, 40.375, 58.875, 40.125, 58.875, 29.875, 56.5, 21.375, 49.625, 16.125, 40.5, 12.25, 38.125, 8.375, 38.75, 1.625, 44.125, 1.875, 49.125, -0.625, 48.875, -20.375, 45, -23.75, 44.75, -30.875, 48.75, -31.5, 52.1461, -40.3125, 51.4382, -50.6951, 38.5779, -50.8131, 33.0326, -46.8017, 26.6614, -46.5657, 22.0601, -50.5771, 17.4587, -49.9872, 12.9753, -45.8578, 7.66599, -44.56, 4.00845, -44.7959, 1.88477, -54.2347, -3.42456, -57.5382, -14.2791, -57.0663, -16.4028, -53.0548, -17.8186, -47.1556, -27.625, -46.25, -31.75, -48.125, -39.875, -48.875, -48.5, -51.375, -48.625, -56.625, -55, -56.75, -57, -52.75, -60.375, -49.75 )
+disabled = true
+[connection signal="body_exited" from="." to="." method="_on_BlastydiosSlime_body_exited"]
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
