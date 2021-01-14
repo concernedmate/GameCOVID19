@@ -1,0 +1,176 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Sprites/Serpentes.png" type="Texture" id=1]
+[ext_resource path="res://Scenes - Bosses/BossSerpentes.gd" type="Script" id=2]
+[ext_resource path="res://Scenes - Bosses/HornSerpentes.gd" type="Script" id=3]
+[ext_resource path="res://FX/shadows_32x32.png" type="Texture" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 130.0
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 128, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 128, 128, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 256, 128, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 384, 128, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 384, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 1 )
+region = Rect2( 128, 384, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 1 )
+region = Rect2( 256, 384, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 1 )
+region = Rect2( 384, 384, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 256, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 1 )
+region = Rect2( 128, 256, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 1 )
+region = Rect2( 256, 256, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 1 )
+region = Rect2( 512, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 1 )
+region = Rect2( 640, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 1 )
+region = Rect2( 768, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 1 )
+region = Rect2( 896, 0, 128, 128 )
+
+[sub_resource type="SpriteFrames" id=17]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
+"loop": true,
+"name": "laser",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
+"loop": true,
+"name": "charge",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 16 ) ],
+"loop": true,
+"name": "spit",
+"speed": 10.0
+} ]
+
+[node name="BossSerpentes" type="KinematicBody2D"]
+position = Vector2( 625.837, 386.445 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="shadows" type="Sprite" parent="."]
+position = Vector2( 3.74579, 30.7153 )
+scale = Vector2( 9, 11 )
+texture = ExtResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
+frames = SubResource( 17 )
+animation = "idle"
+frame = 3
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Horn_R" type="KinematicBody2D" parent="."]
+position = Vector2( 150, -30 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Horn_R"]
+position = Vector2( 0, 75 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+vframes = 4
+hframes = 8
+frame = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Horn_R"]
+position = Vector2( 0, 75 )
+polygon = PoolVector2Array( 7.76758, 39.9358, 8.00354, 106.479, 26.645, 144.47, 32.0723, 104.355, 41.0391, 51.9702, 52.1296, 29.5532, 51.2177, -35.3044, 42.5674, -63.0262, 29.6698, -85.2498, 16.1523, -92.0902, 2.22961, -103.815, -35.6696, -100.045, -35.0743, -91.7108, -18.2082, -68.0982, -35.2728, -34.5643, -27.931, -21.6667, -20.5893, -10.9517, -7.2948, -3.21313, -9.47748, -20.4761, -9.87433, -36.747, -0.349915, -32.9769, 13.7383, -12.5391, 14.1083, 23.9807 )
+
+[node name="Area2D" type="Area2D" parent="Horn_R"]
+position = Vector2( 0, 75 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Horn_R/Area2D"]
+position = Vector2( 0, 4 )
+scale = Vector2( 1.1, 1.1 )
+polygon = PoolVector2Array( 7.76758, 39.9358, 8.00354, 106.479, 26.645, 144.47, 32.0723, 104.355, 41.0391, 51.9702, 52.1296, 29.5532, 51.2177, -35.3044, 42.5674, -63.0262, 29.6698, -85.2498, 16.1523, -92.0902, 2.22961, -103.815, -35.6696, -100.045, -35.0743, -91.7108, -18.2082, -68.0982, -35.2728, -34.5643, -27.931, -21.6667, -20.5893, -10.9517, -7.2948, -3.21313, -9.47748, -20.4761, -9.87433, -36.747, -0.349915, -32.9769, 13.7383, -12.5391, 14.1083, 23.9807 )
+
+[node name="Horn_L" type="KinematicBody2D" parent="."]
+position = Vector2( -150, -30 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="Horn_L"]
+position = Vector2( 0, 75 )
+scale = Vector2( -4, 4 )
+texture = ExtResource( 1 )
+vframes = 4
+hframes = 8
+frame = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Horn_L"]
+position = Vector2( 0, 75 )
+scale = Vector2( -1, 1 )
+polygon = PoolVector2Array( 7.76758, 39.9358, 8.00354, 106.479, 26.645, 144.47, 32.0723, 104.355, 41.0391, 51.9702, 52.1296, 29.5532, 51.2177, -35.3044, 42.5674, -63.0262, 29.6698, -85.2498, 16.1523, -92.0902, 2.22961, -103.815, -35.6696, -100.045, -35.0743, -91.7108, -18.2082, -68.0982, -35.2728, -34.5643, -27.931, -21.6667, -20.5893, -10.9517, -7.2948, -3.21313, -9.47748, -20.4761, -9.87433, -36.747, -0.349915, -32.9769, 13.7383, -12.5391, 14.1083, 23.9807 )
+
+[node name="Area2D" type="Area2D" parent="Horn_L"]
+position = Vector2( 0, 75 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Horn_L/Area2D"]
+position = Vector2( 0, 4 )
+rotation = 3.14159
+scale = Vector2( 1.1, -1.1 )
+polygon = PoolVector2Array( 7.76758, 39.9358, 8.00354, 106.479, 26.645, 144.47, 32.0723, 104.355, 41.0391, 51.9702, 52.1296, 29.5532, 51.2177, -35.3044, 42.5674, -63.0262, 29.6698, -85.2498, 16.1523, -92.0902, 2.22961, -103.815, -35.6696, -100.045, -35.0743, -91.7108, -18.2082, -68.0982, -35.2728, -34.5643, -27.931, -21.6667, -20.5893, -10.9517, -7.2948, -3.21313, -9.47748, -20.4761, -9.87433, -36.747, -0.349915, -32.9769, 13.7383, -12.5391, 14.1083, 23.9807 )
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

@@ -1,0 +1,168 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://MainMenu/Menu_BG.png" type="Texture" id=1]
+[ext_resource path="res://GUI/Blank.png" type="Texture" id=2]
+[ext_resource path="res://MainMenu/Judul.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Player.png" type="Texture" id=4]
+[ext_resource path="res://Weapons/machine gun.png" type="Texture" id=5]
+[ext_resource path="res://Scene - MainMenu/HighscoreMenu.gd" type="Script" id=6]
+[ext_resource path="res://GUI/ARCADECLASSIC.TTF" type="DynamicFontData" id=7]
+[ext_resource path="res://MainMenu/BlankButton_hover.png" type="Texture" id=8]
+[ext_resource path="res://MainMenu/BlankButton_pressed.png" type="Texture" id=9]
+[ext_resource path="res://MainMenu/BlankButton.png" type="Texture" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+font_data = ExtResource( 7 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 4 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 4 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 4 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 4 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=8]
+size = 48
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 48
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 64
+font_data = ExtResource( 7 )
+
+[node name="HighscoreMenu" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="bg" type="Sprite" parent="."]
+position = Vector2( 640, 360 )
+scale = Vector2( 1.671, 1.671 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Judul" type="Sprite" parent="."]
+position = Vector2( 1009.49, 102.907 )
+texture = ExtResource( 3 )
+
+[node name="highscores" type="Sprite" parent="."]
+position = Vector2( 407.956, 367.454 )
+scale = Vector2( 4.62093, 15.268 )
+texture = ExtResource( 2 )
+
+[node name="back" type="TextureButton" parent="."]
+margin_left = 1047.53
+margin_top = 611.172
+margin_right = 1234.53
+margin_bottom = 679.172
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="back"]
+margin_left = 43.7266
+margin_top = 8.409
+margin_right = 147.727
+margin_bottom = 57.409
+custom_fonts/font = SubResource( 1 )
+text = "BACK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="player" type="AnimatedSprite" parent="."]
+position = Vector2( 1003.64, 403.025 )
+scale = Vector2( 11, 11 )
+frames = SubResource( 7 )
+frame = 4
+playing = true
+flip_h = true
+
+[node name="Sprite" type="Sprite" parent="player"]
+position = Vector2( -4.5918, 8.62262 )
+scale = Vector2( 0.0611225, 0.0444951 )
+texture = ExtResource( 5 )
+
+[node name="scoreNumber" type="Label" parent="."]
+margin_left = 453.0
+margin_top = 110.0
+margin_right = 625.0
+margin_bottom = 627.0
+custom_fonts/font = SubResource( 8 )
+text = "10000
+10000
+10000
+10000
+10000
+10000
+10000
+10000
+10000
+10000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="scoreNama" type="Label" parent="."]
+margin_left = 168.0
+margin_top = 110.317
+margin_right = 381.0
+margin_bottom = 627.317
+custom_fonts/font = SubResource( 9 )
+text = "AAAAAAAA
+TES2
+TES3
+TES4
+TES5
+TES6
+TES7
+TES8
+TES9
+TES10"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 214.187
+margin_top = 41.5774
+margin_right = 587.187
+margin_bottom = 106.577
+custom_fonts/font = SubResource( 10 )
+text = "HIGHSCORE"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="back" to="." method="_on_back_button_up"]

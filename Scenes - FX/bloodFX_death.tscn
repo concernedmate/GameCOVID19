@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes - FX/bloodFX_death.gd" type="Script" id=1]
+
+[sub_resource type="ParticlesMaterial" id=1]
+lifetime_randomness = 0.5
+emission_shape = 1
+emission_sphere_radius = 1.0
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 30.0
+initial_velocity_random = 0.5
+angular_velocity = 60.0
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel_random = 1.0
+damping = 15.0
+damping_random = 0.5
+scale = 7.5
+scale_random = 1.0
+
+[node name="bloodFX_death" type="Particles2D"]
+position = Vector2( -237.931, 8.75843 )
+scale = Vector2( 1.5, 1.5 )
+amount = 24
+lifetime = 3.0
+speed_scale = 5.0
+explosiveness = 1.0
+local_coords = false
+process_material = SubResource( 1 )
+script = ExtResource( 1 )

@@ -1,0 +1,1293 @@
+[gd_scene load_steps=110 format=2]
+
+[ext_resource path="res://Scene - MainMenu/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://MainMenu/BlankButton.png" type="Texture" id=2]
+[ext_resource path="res://MainMenu/Highscore.png" type="Texture" id=3]
+[ext_resource path="res://MainMenu/Menu_BG.png" type="Texture" id=4]
+[ext_resource path="res://MainMenu/eXIT.png" type="Texture" id=5]
+[ext_resource path="res://MainMenu/START.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Player.png" type="Texture" id=7]
+[ext_resource path="res://Weapons/Pistol.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Virus.png" type="Texture" id=9]
+[ext_resource path="res://MainMenu/Judul.png" type="Texture" id=10]
+[ext_resource path="res://MainMenu/Highscore_pressed.png" type="Texture" id=11]
+[ext_resource path="res://MainMenu/START_hover.png" type="Texture" id=12]
+[ext_resource path="res://MainMenu/eXIT_pressed.png" type="Texture" id=13]
+[ext_resource path="res://MainMenu/eXIT_hover.png" type="Texture" id=14]
+[ext_resource path="res://MainMenu/Highscore_hover.png" type="Texture" id=15]
+[ext_resource path="res://MainMenu/START_pressed.png" type="Texture" id=16]
+[ext_resource path="res://MainMenu/BlankButton_hover.png" type="Texture" id=17]
+[ext_resource path="res://MainMenu/BlankButton_pressed.png" type="Texture" id=18]
+[ext_resource path="res://GUI/square.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Virus4.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Virus2.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Virus5.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Virus3.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Genidios.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/Segaradios.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Blastydios.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/Serpentes.png" type="Texture" id=27]
+[ext_resource path="res://GUI/ARCADECLASSIC.TTF" type="DynamicFontData" id=28]
+[ext_resource path="res://Almanac/Logo_Hari_Rabies_Sedunia_bahasa_Indonesia.png" type="Texture" id=29]
+[ext_resource path="res://Almanac/800px-PhageExterior.svg.png" type="Texture" id=30]
+[ext_resource path="res://Almanac/Pandora.png" type="Texture" id=31]
+[ext_resource path="res://Almanac/influenza.png" type="Texture" id=32]
+[ext_resource path="res://Pickups/Cuci Tangan.png" type="Texture" id=33]
+[ext_resource path="res://Almanac/vaccines.png" type="Texture" id=34]
+[ext_resource path="res://Almanac/virus_cartoon_carlosrobe.png" type="Texture" id=35]
+[ext_resource path="res://Almanac/reproduksiVirus.png" type="Texture" id=36]
+[ext_resource path="res://FX/Asap.png" type="Texture" id=37]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 7 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 7 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 7 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 7 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 9 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 9 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 9 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 9 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=12]
+animations = [ {
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 6.0
+} ]
+
+[sub_resource type="DynamicFont" id=13]
+size = 24
+font_data = ExtResource( 28 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 20 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 20 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 20 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 20 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 20 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=19]
+animations = [ {
+"frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 9 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 9 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 9 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 9 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=25]
+animations = [ {
+"frames": [ SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 21 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 21 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 21 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 21 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=30]
+animations = [ {
+"frames": [ SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 22 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 22 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 22 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 22 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=35]
+animations = [ {
+"frames": [ SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 23 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 23 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 23 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 23 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 23 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 23 )
+region = Rect2( 160, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 23 )
+region = Rect2( 192, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 23 )
+region = Rect2( 224, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=44]
+animations = [ {
+"frames": [ SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 26 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 26 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 26 )
+region = Rect2( 128, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=48]
+atlas = ExtResource( 26 )
+region = Rect2( 192, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=49]
+atlas = ExtResource( 26 )
+region = Rect2( 256, 0, 64, 64 )
+
+[sub_resource type="SpriteFrames" id=50]
+animations = [ {
+"frames": [ SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=51]
+atlas = ExtResource( 24 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=52]
+atlas = ExtResource( 24 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=53]
+atlas = ExtResource( 24 )
+region = Rect2( 128, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=54]
+atlas = ExtResource( 24 )
+region = Rect2( 192, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=55]
+atlas = ExtResource( 24 )
+region = Rect2( 256, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=56]
+atlas = ExtResource( 24 )
+region = Rect2( 320, 0, 64, 64 )
+
+[sub_resource type="SpriteFrames" id=57]
+animations = [ {
+"frames": [ SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=58]
+atlas = ExtResource( 25 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=59]
+atlas = ExtResource( 25 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=60]
+atlas = ExtResource( 25 )
+region = Rect2( 128, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=61]
+atlas = ExtResource( 25 )
+region = Rect2( 192, 0, 64, 64 )
+
+[sub_resource type="SpriteFrames" id=62]
+animations = [ {
+"frames": [ SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=63]
+atlas = ExtResource( 37 )
+region = Rect2( 0, 0, 34, 33 )
+
+[sub_resource type="AtlasTexture" id=64]
+atlas = ExtResource( 37 )
+region = Rect2( 34, 0, 34, 33 )
+
+[sub_resource type="AtlasTexture" id=65]
+atlas = ExtResource( 37 )
+region = Rect2( 68, 0, 34, 33 )
+
+[sub_resource type="SpriteFrames" id=66]
+animations = [ {
+"frames": [ SubResource( 63 ), SubResource( 64 ), SubResource( 65 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=67]
+atlas = ExtResource( 27 )
+region = Rect2( 0, 128, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=68]
+atlas = ExtResource( 27 )
+region = Rect2( 128, 128, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=69]
+atlas = ExtResource( 27 )
+region = Rect2( 256, 128, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=70]
+atlas = ExtResource( 27 )
+region = Rect2( 384, 128, 128, 128 )
+
+[sub_resource type="SpriteFrames" id=71]
+animations = [ {
+"frames": [ SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=72]
+font_data = ExtResource( 28 )
+
+[node name="MainMenu" type="Node"]
+script = ExtResource( 1 )
+
+[node name="BG" type="Sprite" parent="."]
+position = Vector2( 640, 360 )
+scale = Vector2( 1.67102, 1.67053 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="judul" type="Sprite" parent="."]
+position = Vector2( 650, 112 )
+scale = Vector2( 1.65363, 1.76711 )
+texture = ExtResource( 10 )
+
+[node name="char player" type="AnimatedSprite" parent="."]
+position = Vector2( 104, 480 )
+scale = Vector2( 7.375, 6.875 )
+frames = SubResource( 6 )
+frame = 3
+playing = true
+
+[node name="Pistol" type="Sprite" parent="."]
+position = Vector2( 124, 539 )
+scale = Vector2( 0.339286, 0.316964 )
+texture = ExtResource( 8 )
+flip_h = true
+
+[node name="viruses" type="Node2D" parent="."]
+position = Vector2( 168, 456 )
+scale = Vector2( 7.375, 6.875 )
+
+[node name="virus9" type="AnimatedSprite" parent="viruses"]
+position = Vector2( 118.102, 6.39999 )
+scale = Vector2( 0.591102, 0.668182 )
+frames = SubResource( 12 )
+frame = 2
+playing = true
+flip_h = true
+
+[node name="virus7" type="AnimatedSprite" parent="viruses"]
+position = Vector2( 133.424, 5.96363 )
+scale = Vector2( 0.591102, 0.668182 )
+frames = SubResource( 12 )
+frame = 2
+playing = true
+flip_h = true
+
+[node name="virus2" type="AnimatedSprite" parent="viruses"]
+position = Vector2( 104.136, 11.4909 )
+scale = Vector2( 0.591102, 0.668182 )
+frames = SubResource( 12 )
+frame = 1
+playing = true
+flip_h = true
+
+[node name="virus8" type="AnimatedSprite" parent="viruses"]
+position = Vector2( 113.898, 11.6364 )
+scale = Vector2( 0.591102, 0.668182 )
+frames = SubResource( 12 )
+playing = true
+flip_h = true
+
+[node name="virus6" type="AnimatedSprite" parent="viruses"]
+position = Vector2( 124.746, 11.6364 )
+scale = Vector2( 0.591102, 0.668182 )
+frames = SubResource( 12 )
+frame = 2
+playing = true
+flip_h = true
+
+[node name="virus5" type="AnimatedSprite" parent="viruses"]
+position = Vector2( 139.932, 11.6364 )
+scale = Vector2( 0.591102, 0.668182 )
+frames = SubResource( 12 )
+frame = 2
+playing = true
+flip_h = true
+
+[node name="virus4" type="AnimatedSprite" parent="viruses"]
+position = Vector2( 133.695, 15.2727 )
+scale = Vector2( 0.591102, 0.668182 )
+frames = SubResource( 12 )
+playing = true
+flip_h = true
+
+[node name="virus3" type="AnimatedSprite" parent="viruses"]
+position = Vector2( 121.627, 15.1273 )
+scale = Vector2( 0.591102, 0.668182 )
+frames = SubResource( 12 )
+frame = 1
+playing = true
+flip_h = true
+
+[node name="virus" type="AnimatedSprite" parent="viruses"]
+position = Vector2( 107.695, 15.1273 )
+scale = Vector2( 0.591102, 0.668182 )
+frames = SubResource( 12 )
+frame = 2
+playing = true
+flip_h = true
+
+[node name="buttons" type="Node2D" parent="."]
+
+[node name="highscore" type="TextureButton" parent="buttons"]
+margin_left = 545.0
+margin_top = 357.0
+margin_right = 760.0
+margin_bottom = 424.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 15 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="start" type="TextureButton" parent="buttons"]
+margin_left = 542.0
+margin_top = 265.0
+margin_right = 760.0
+margin_bottom = 330.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 16 )
+texture_hover = ExtResource( 12 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="exit" type="TextureButton" parent="buttons"]
+margin_left = 546.0
+margin_top = 457.0
+margin_right = 761.0
+margin_bottom = 524.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 14 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="almanac" type="TextureButton" parent="."]
+margin_left = 42.0448
+margin_top = 649.172
+margin_right = 181.045
+margin_bottom = 693.172
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 18 )
+texture_hover = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="almanac"]
+margin_left = 25.3776
+margin_top = 9.99097
+margin_right = 116.378
+margin_bottom = 34.991
+custom_fonts/font = SubResource( 13 )
+text = "ALMANAC"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Almanac" type="Sprite" parent="."]
+visible = false
+position = Vector2( 733.353, 356 )
+scale = Vector2( 34.9794, 22.9061 )
+texture = ExtResource( 19 )
+
+[node name="background" type="Sprite" parent="Almanac"]
+position = Vector2( 5.83167, 0.0237635 )
+scale = Vector2( 0.61021, 0.994881 )
+texture = ExtResource( 19 )
+
+[node name="penjelasan1" type="Node2D" parent="Almanac/background"]
+visible = false
+
+[node name="text1" type="Label" parent="Almanac/background/penjelasan1"]
+margin_left = -11.1333
+margin_top = -11.8443
+margin_right = 163.867
+margin_bottom = 117.156
+rect_scale = Vector2( 0.075, 0.075 )
+text = "Gluttonivirion:
+Bahaya saat bersamaan imut saat sendirian. Gigi-gigi mereka menghitam gara-gara tidak mau sikat gigi dan tidak suka makan sayur."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="Almanac/background/penjelasan1"]
+position = Vector2( 7.33043, -8.90342 )
+scale = Vector2( -0.178, 0.156 )
+frames = SubResource( 19 )
+animation = "New Anim"
+frame = 3
+playing = true
+
+[node name="AnimatedSprite5" type="AnimatedSprite" parent="Almanac/background/penjelasan1"]
+position = Vector2( 5.56805, -7.1251 )
+scale = Vector2( -0.178, 0.156 )
+frames = SubResource( 19 )
+animation = "New Anim"
+frame = 3
+playing = true
+
+[node name="AnimatedSprite6" type="AnimatedSprite" parent="Almanac/background/penjelasan1"]
+position = Vector2( 8.32378, -6.14783 )
+scale = Vector2( -0.178, 0.156 )
+frames = SubResource( 19 )
+animation = "New Anim"
+frame = 3
+playing = true
+
+[node name="text18" type="Label" parent="Almanac/background/penjelasan1"]
+margin_left = -3.0
+margin_top = 1.0
+margin_right = 214.0
+margin_bottom = 161.0
+rect_scale = Vector2( 0.075, 0.075 )
+text = "Fun fact:
+Rabies adalah salah satu penyakit yang disebabkan oleh virus. Kata rabies berasal dari bahasa Sanskerta kuno \"rabhas\" yang berarti melakukan kekerasan atau kejahatan.  Penyakit ini dapat tersebar melalui gigitan ataupun cakaran hewan yang tertular."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logo_Hari_Rabies_Sedunia_bahasa_Indonesia" type="Sprite" parent="Almanac/background/penjelasan1"]
+position = Vector2( -8.26154, 5.74646 )
+scale = Vector2( 0.04, 0.04 )
+texture = ExtResource( 29 )
+
+[node name="penjelasan2" type="Node2D" parent="Almanac/background"]
+visible = false
+
+[node name="text2" type="Label" parent="Almanac/background/penjelasan2"]
+margin_left = -11.0
+margin_top = -11.8443
+margin_right = 164.0
+margin_bottom = 117.156
+rect_scale = Vector2( 0.075, 0.075 )
+text = "Shroomivirion:
+\"AKU SIKAT GIGI TERUSS!\" katanya. \"Ompong? Aku juga tidak tau!\". Akhirnya ketahuan kalau sikat giginya tidak bersih dan merata."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="Almanac/background/penjelasan2"]
+position = Vector2( 6.99295, -9.54607 )
+scale = Vector2( 0.212, 0.202 )
+frames = SubResource( 25 )
+playing = true
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="Almanac/background/penjelasan2"]
+position = Vector2( 5.3215, -6.31408 )
+scale = Vector2( 0.212, 0.202 )
+frames = SubResource( 25 )
+playing = true
+
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="Almanac/background/penjelasan2"]
+position = Vector2( 9.24854, -7.0476 )
+scale = Vector2( -0.212, 0.202 )
+frames = SubResource( 25 )
+frame = 4
+playing = true
+
+[node name="text17" type="Label" parent="Almanac/background/penjelasan2"]
+margin_left = -3.0
+margin_top = 1.0
+margin_right = 214.0
+margin_bottom = 161.0
+rect_scale = Vector2( 0.075, 0.075 )
+text = "Fun fact:
+Influenza merupakan penyakit menular yang disebabkan oleh virus. Cara penularan utamanya adalah melewati cairan seperti bersin, liur, atau batuk dari orang yang terinfeksi. Berbagai virus lain juga dapat menyebar dengan cara seperti ini."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="influenza" type="Sprite" parent="Almanac/background/penjelasan2"]
+position = Vector2( -8.26154, 7.34814 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 32 )
+
+[node name="penjelasan3" type="Node2D" parent="Almanac/background"]
+visible = false
+
+[node name="text3" type="Label" parent="Almanac/background/penjelasan3"]
+margin_left = -11.1333
+margin_top = -11.8443
+margin_right = 171.867
+margin_bottom = 126.156
+rect_scale = Vector2( 0.075, 0.075 )
+text = "Dynavirion:
+\"Ledakanku bisa menyamai ledakan di film-film hollywood\" jawabnya bangga saat ditanya seberapa besar ledakannya. Dia suka makanan yang pedas-pedas."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="Almanac/background/penjelasan3"]
+position = Vector2( 10.3262, -7.04759 )
+scale = Vector2( -0.126, 0.122 )
+frames = SubResource( 30 )
+frame = 3
+playing = true
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="Almanac/background/penjelasan3"]
+position = Vector2( 6.57803, -5.73668 )
+scale = Vector2( 0.126, 0.122 )
+frames = SubResource( 30 )
+frame = 2
+playing = true
+
+[node name="text16" type="Label" parent="Almanac/background/penjelasan3"]
+margin_left = -3.0
+margin_top = 1.0
+margin_right = 214.0
+margin_bottom = 161.0
+rect_scale = Vector2( 0.075, 0.075 )
+text = "Fun fact:
+Untuk menghindari infeksi dari virus biasakanlah untuk mencuci tangan dengan sabun.
+Biasakan juga untuk tidak batuk dan bersin sembarangan. "
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cuci Tangan" type="Sprite" parent="Almanac/background/penjelasan3"]
+position = Vector2( -8.00391, 4.64954 )
+scale = Vector2( 0.0153334, 0.0146526 )
+texture = ExtResource( 33 )
+
+[node name="penjelasan4" type="Node2D" parent="Almanac/background"]
+visible = false
+
+[node name="text4" type="Label" parent="Almanac/background/penjelasan4"]
+margin_left = -11.0
+margin_top = -11.7621
+margin_right = 156.0
+margin_bottom = 135.238
+rect_scale = Vector2( 0.075, 0.075 )
+text = "Koffingvirion:
+Koffingvirion selalu meninggalkan jejak kemanapun ia pergi. Tidak ada yang tau alasannya. Namun semua orang tahu kalau dia takut tersesat."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="Almanac/background/penjelasan4"]
+position = Vector2( 8.03058, -7.0476 )
+scale = Vector2( 0.178419, 0.178776 )
+frames = SubResource( 35 )
+frame = 3
+playing = true
+
+[node name="text15" type="Label" parent="Almanac/background/penjelasan4"]
+margin_left = -3.0
+margin_top = -0.0877686
+margin_right = 214.0
+margin_bottom = 186.912
+rect_scale = Vector2( 0.075, 0.075 )
+text = "Fun fact:
+Vaksinasi atau Imunisasi adalah proses untuk merangsang kekebalan tubuh terhadap suatu penyakit. Salah satu jenis vaksin adalah vaksin hidup yang dilemahkan yang memiliki infeksi yang cukup kuat untuk memicu sistem imun namun tidak dapat menimbulkan penyakit."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="vaccines" type="Sprite" parent="Almanac/background/penjelasan4"]
+position = Vector2( -8.30841, 5.74646 )
+scale = Vector2( 0.0357354, 0.0358064 )
+texture = ExtResource( 34 )
+
+[node name="penjelasan5" type="Node2D" parent="Almanac/background"]
+visible = false
+
+[node name="text5" type="Label" parent="Almanac/background/penjelasan5"]
+margin_left = -11.1333
+margin_top = -11.7182
+margin_right = 177.867
+margin_bottom = 138.282
+rect_scale = Vector2( 0.075, 0.075 )
+text = "Tirtavirion:
+Dia memenangkan kejuaraan tatap menatap selama satu dekade berturut-turut. \"Rahasianya adalah air mata\" katanya. \"Air mata dapat membantu membersihkan mata dari bahan-bahan asing\" tambahnya."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="Almanac/background/penjelasan5"]
+position = Vector2( 8.03057, -5.49402 )
+scale = Vector2( 0.368, 0.304 )
+frames = SubResource( 44 )
+frame = 1
+playing = true
+
+[node name="text14" type="Label" parent="Almanac/background/penjelasan5"]
+margin_left = -3.0
+margin_top = 1.0
+margin_right = 214.0
+margin_bottom = 161.0
+rect_scale = Vector2( 0.075, 0.075 )
+text = "Fun fact:
+Bakteriofag adalah suatu virus yang menginfeksi dan replikasi melalui bakteria. Bakteriofag dapat digunakan untuk terapi pengobatan infeksi bakteri patogen. "
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="800px-PhageExteriorsvg" type="Sprite" parent="Almanac/background/penjelasan5"]
+position = Vector2( -7.89063, 5.70264 )
+scale = Vector2( 0.0117649, 0.00959385 )
+texture = ExtResource( 30 )
+
+[node name="penjelasan6" type="Node2D" parent="Almanac/background"]
+visible = false
+
+[node name="text6" type="Label" parent="Almanac/background/penjelasan6"]
+margin_left = -11.0
+margin_top = -12.0758
+margin_right = 174.0
+margin_bottom = 154.924
+rect_scale = Vector2( 0.075, 0.075 )
+text = "Blastydios:
+Dia berteman baik dengan Gluttonivirion. Mereka sering makan bersama. Dia berusaha keras untuk mengubah gaya hidup temannya menjadi seperti dirinya yang suka berolahraga. Makanan favoritnya adalah bayam."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="Almanac/background/penjelasan6"]
+position = Vector2( 8.03058, -6.31408 )
+scale = Vector2( 0.16, 0.144 )
+frames = SubResource( 50 )
+frame = 2
+playing = true
+
+[node name="text13" type="Label" parent="Almanac/background/penjelasan6"]
+margin_left = -3.0
+margin_top = 1.0
+margin_right = 214.0
+margin_bottom = 161.0
+rect_scale = Vector2( 0.075, 0.075 )
+text = "Fun fact:
+Terdapat perbedaan pendapat mengenai status virus sebagai makhluk hidup atau bukan. Ini dikarenakan virus sebenarnya hanyalah suatu rangkaian protein yang hanya aktif ketika berada di dalam suatu sel hidup.
+"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="virus_cartoon_carlosrobe" type="Sprite" parent="Almanac/background/penjelasan6"]
+position = Vector2( -7.37, 5.74646 )
+scale = Vector2( 0.0277677, 0.0288742 )
+texture = ExtResource( 35 )
+
+[node name="penjelasan7" type="Node2D" parent="Almanac/background"]
+visible = false
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="Almanac/background/penjelasan7"]
+position = Vector2( 8.04214, -6.31409 )
+scale = Vector2( 0.156, 0.136 )
+frames = SubResource( 57 )
+frame = 5
+playing = true
+
+[node name="text7" type="Label" parent="Almanac/background/penjelasan7"]
+margin_left = -11.0
+margin_top = -12.0758
+margin_right = 174.0
+margin_bottom = 154.924
+rect_scale = Vector2( 0.075, 0.075 )
+text = "Genidios:
+Genidios adalah kakak tertua dari Dynavirion. Dia bekerja full time di salah satu studio film Hollywood. Tentu saja dia menjadi dynamo master disana. \"Ini adalah impian ku sejak kecil\" katanya terharu."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text12" type="Label" parent="Almanac/background/penjelasan7"]
+margin_left = -3.0
+margin_top = 1.0
+margin_right = 214.0
+margin_bottom = 161.0
+rect_scale = Vector2( 0.075, 0.075 )
+text = "Fun fact:
+Virus bereproduksi dengan cara menempelkan diri ke sel dan mempenetrasi pada sel inang. Lalu virus akan menyisipkan gen-gen miliknya ke sel inang yang nantinya akan melakukan pembelahan dan menghasilkan replikasi virus. "
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="reproduksiVirus" type="Sprite" parent="Almanac/background/penjelasan7"]
+position = Vector2( -7.20476, 5.63257 )
+scale = Vector2( 0.0151508, 0.0184469 )
+texture = ExtResource( 36 )
+
+[node name="penjelasan8" type="Node2D" parent="Almanac/background"]
+visible = false
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="Almanac/background/penjelasan8"]
+position = Vector2( 7.9485, -5.99445 )
+scale = Vector2( 0.176, 0.152 )
+frames = SubResource( 62 )
+frame = 2
+playing = true
+
+[node name="text8" type="Label" parent="Almanac/background/penjelasan8"]
+margin_left = -11.0
+margin_top = -12.0
+margin_right = 176.0
+margin_bottom = 155.0
+rect_scale = Vector2( 0.075, 0.075 )
+text = "Segaradios:
+Sang penguasa arus, Segaradios. Dia merupakan pesulap yang sangat terkenal di seluruh dunia. Aksinya selalu berhubungan dengan arus atau gelombang. Namun akhir-akhir ini dia lebih sering bermain dengan laser."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text11" type="Label" parent="Almanac/background/penjelasan8"]
+margin_left = -3.0
+margin_top = 1.0
+margin_right = 214.0
+margin_bottom = 161.0
+rect_scale = Vector2( 0.075, 0.075 )
+text = "Fun fact:
+Kata virus berasal dari bahasa Latin virus yang berarti racun dan cairan berbahaya lainnya. Rumpun bahasa Indo-Eropa lain seperti bahasa Sanskerta \"visa\", bahasa Avesta \"visa\", dan bahasa Yunani Kuno \"ioc\" semuanya berarti racun."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Almanac/background/penjelasan8"]
+position = Vector2( -8.26157, 5.74648 )
+scale = Vector2( 0.17255, 0.162046 )
+frames = SubResource( 66 )
+playing = true
+
+[node name="penjelasan9" type="Node2D" parent="Almanac/background"]
+visible = false
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="Almanac/background/penjelasan9"]
+position = Vector2( 7.5621, -6.0508 )
+scale = Vector2( 0.121212, 0.106943 )
+frames = SubResource( 71 )
+frame = 3
+playing = true
+
+[node name="text9" type="Label" parent="Almanac/background/penjelasan9"]
+margin_left = -11.0
+margin_top = -12.0
+margin_right = 176.0
+margin_bottom = 148.0
+rect_scale = Vector2( 0.075, 0.075 )
+text = "Parientela Viperolous:
+Halo, aku adalah Viperolous, dari keluarga Pandora. Sudah lama sekali aku menunggu saat-saat ini. Kenapa? Ya karena ini adalah debut pertamaku sebagai direktur film. Inilah cita-citaku sejak kecil!. Mohon bantuannya ya!"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text10" type="Label" parent="Almanac/background/penjelasan9"]
+margin_left = -3.0
+margin_top = 1.0
+margin_right = 214.0
+margin_bottom = 161.0
+rect_scale = Vector2( 0.075, 0.075 )
+text = "Fun fact:
+Pandoravirus adalah salah satu genus virus raksasa. Pandoravirus berukuran seribu kali lebih besar dibanding virus influenza yang berukuran 100 nanometer. Pandoravirus juga lebih besar dibanding virus raksasa lainnya seperti Megavirus dan Mimivirus"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pandora" type="Sprite" parent="Almanac/background/penjelasan9"]
+position = Vector2( -7.74227, 6.3991 )
+scale = Vector2( 0.024901, 0.0246903 )
+texture = ExtResource( 31 )
+
+[node name="Gluttonivirion" type="TextureButton" parent="Almanac"]
+margin_left = -11.7856
+margin_top = -11.7599
+margin_right = -9.78559
+margin_bottom = -8.75989
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 18 )
+texture_hover = ExtResource( 17 )
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Almanac/Gluttonivirion"]
+position = Vector2( 0.891586, 1.12429 )
+scale = Vector2( 0.0543184, 0.0772807 )
+frames = SubResource( 19 )
+animation = "New Anim"
+playing = true
+
+[node name="Shroomivirion" type="TextureButton" parent="Almanac"]
+margin_left = -8.7623
+margin_top = -11.6345
+margin_right = -6.7623
+margin_bottom = -8.63446
+mouse_default_cursor_shape = 2
+disabled = true
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 18 )
+texture_hover = ExtResource( 17 )
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Almanac/Shroomivirion"]
+visible = false
+position = Vector2( 1.02203, 1.24421 )
+scale = Vector2( 0.0647113, 0.1 )
+frames = SubResource( 25 )
+playing = true
+
+[node name="Dynavirion" type="TextureButton" parent="Almanac"]
+margin_left = -6.17506
+margin_top = -11.6781
+margin_right = -4.17506
+margin_bottom = -8.67811
+mouse_default_cursor_shape = 2
+disabled = true
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 18 )
+texture_hover = ExtResource( 17 )
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Almanac/Dynavirion"]
+visible = false
+position = Vector2( 0.959976, 1.48677 )
+scale = Vector2( 0.0383191, 0.0606078 )
+frames = SubResource( 30 )
+frame = 3
+playing = true
+
+[node name="Koffingvirion" type="TextureButton" parent="Almanac"]
+margin_left = -12.1357
+margin_top = -7.77086
+margin_right = -10.1357
+margin_bottom = -4.77086
+mouse_default_cursor_shape = 2
+disabled = true
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 18 )
+texture_hover = ExtResource( 17 )
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Almanac/Koffingvirion"]
+visible = false
+position = Vector2( 1.03052, 1.40469 )
+scale = Vector2( 0.0450695, 0.0684573 )
+frames = SubResource( 35 )
+frame = 3
+playing = true
+
+[node name="Tirtavirion" type="TextureButton" parent="Almanac"]
+margin_left = -9.03389
+margin_top = -7.96731
+margin_right = -7.03389
+margin_bottom = -4.96731
+mouse_default_cursor_shape = 2
+disabled = true
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 18 )
+texture_hover = ExtResource( 17 )
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Almanac/Tirtavirion"]
+visible = false
+position = Vector2( 1.00137, 1.31798 )
+scale = Vector2( 0.0561326, 0.07545 )
+frames = SubResource( 44 )
+frame = 3
+playing = true
+
+[node name="Blastydios" type="TextureButton" parent="Almanac"]
+margin_left = -6.34659
+margin_top = -7.79268
+margin_right = -4.34659
+margin_bottom = -4.79268
+mouse_default_cursor_shape = 2
+disabled = true
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 18 )
+texture_hover = ExtResource( 17 )
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Almanac/Blastydios"]
+visible = false
+position = Vector2( 0.975525, 1.30591 )
+scale = Vector2( 0.0246487, 0.0355303 )
+frames = SubResource( 50 )
+frame = 3
+playing = true
+
+[node name="Genidios" type="TextureButton" parent="Almanac"]
+margin_left = -12.0071
+margin_top = -4.03823
+margin_right = -10.0071
+margin_bottom = -1.03822
+mouse_default_cursor_shape = 2
+disabled = true
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 18 )
+texture_hover = ExtResource( 17 )
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Almanac/Genidios"]
+visible = false
+position = Vector2( 0.993378, 1.30219 )
+scale = Vector2( 0.0239002, 0.0341039 )
+frames = SubResource( 57 )
+playing = true
+
+[node name="Segaradios" type="TextureButton" parent="Almanac"]
+margin_left = -9.0053
+margin_top = -3.97274
+margin_right = -7.0053
+margin_bottom = -0.972741
+mouse_default_cursor_shape = 2
+disabled = true
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 18 )
+texture_hover = ExtResource( 17 )
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Almanac/Segaradios"]
+visible = false
+position = Vector2( 0.99585, 1.32938 )
+scale = Vector2( 0.0269933, 0.0380092 )
+frames = SubResource( 62 )
+frame = 3
+playing = true
+
+[node name="Viperous" type="TextureButton" parent="Almanac"]
+margin_left = -6.16077
+margin_top = -3.81994
+margin_right = -4.16077
+margin_bottom = -0.819943
+mouse_default_cursor_shape = 2
+disabled = true
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 18 )
+texture_hover = ExtResource( 17 )
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Almanac/Viperous"]
+visible = false
+position = Vector2( 0.968201, 1.45648 )
+scale = Vector2( 0.0155217, 0.021915 )
+frames = SubResource( 71 )
+frame = 3
+playing = true
+
+[node name="skor2" type="Label" parent="."]
+visible = false
+margin_left = 431.926
+margin_top = 99.2565
+margin_right = 476.926
+margin_bottom = 136.256
+custom_fonts/font = SubResource( 72 )
+text = "Score
+  5000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="skor3" type="Label" parent="."]
+visible = false
+margin_left = 536.617
+margin_top = 97.5747
+margin_right = 581.617
+margin_bottom = 134.575
+custom_fonts/font = SubResource( 72 )
+text = "Score
+  7500"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="skor4" type="Label" parent="."]
+visible = false
+margin_left = 325.132
+margin_top = 189.232
+margin_right = 370.132
+margin_bottom = 226.232
+custom_fonts/font = SubResource( 72 )
+text = "Score
+10000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="skor5" type="Label" parent="."]
+visible = false
+margin_left = 430.664
+margin_top = 189.232
+margin_right = 475.664
+margin_bottom = 226.232
+custom_fonts/font = SubResource( 72 )
+text = "Score
+12500"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="skor6" type="Label" parent="."]
+visible = false
+margin_left = 535.356
+margin_top = 188.812
+margin_right = 580.356
+margin_bottom = 225.812
+custom_fonts/font = SubResource( 72 )
+text = "Score
+15000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="skor7" type="Label" parent="."]
+visible = false
+margin_left = 325.455
+margin_top = 279.17
+margin_right = 374.455
+margin_bottom = 316.17
+custom_fonts/font = SubResource( 72 )
+text = "Score
+20000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="skor8" type="Label" parent="."]
+visible = false
+margin_left = 432.089
+margin_top = 279.976
+margin_right = 477.089
+margin_bottom = 316.976
+custom_fonts/font = SubResource( 72 )
+text = "Score
+40000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="skor9" type="Label" parent="."]
+visible = false
+margin_left = 535.795
+margin_top = 279.415
+margin_right = 580.795
+margin_bottom = 316.415
+custom_fonts/font = SubResource( 72 )
+text = "Score
+60000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="buttons/highscore" to="." method="_on_highscore_button_up"]
+[connection signal="button_up" from="buttons/start" to="." method="_on_start_button_up"]
+[connection signal="button_up" from="buttons/exit" to="." method="_on_exit_button_up"]
+[connection signal="button_up" from="almanac" to="." method="_on_almanac_button_up"]
+[connection signal="button_up" from="Almanac/Gluttonivirion" to="." method="_on_Gluttonivirion_button_up"]
+[connection signal="button_up" from="Almanac/Shroomivirion" to="." method="_on_Shroomivirion_button_up"]
+[connection signal="button_up" from="Almanac/Dynavirion" to="." method="_on_Dynavirion_button_up"]
+[connection signal="button_up" from="Almanac/Koffingvirion" to="." method="_on_Koffingvirion_button_up"]
+[connection signal="button_up" from="Almanac/Tirtavirion" to="." method="_on_Tirtavirion_button_up"]
+[connection signal="button_up" from="Almanac/Blastydios" to="." method="_on_Blastydios_button_up"]
+[connection signal="button_up" from="Almanac/Genidios" to="." method="_on_Genidios_button_up"]
+[connection signal="button_up" from="Almanac/Segaradios" to="." method="_on_Segaradios_button_up"]
+[connection signal="button_up" from="Almanac/Viperous" to="." method="_on_Viperous_button_up"]

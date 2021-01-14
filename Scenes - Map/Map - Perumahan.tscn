@@ -1,0 +1,463 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Scenes - Map/GUI.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes - Props/rumahProp.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes - Pickups/armorPickup.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes - Map/Randomizer_Perumahan.gd" type="Script" id=4]
+[ext_resource path="res://Scenes - Props/bossSpawner.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes - Props/Border.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Audio - BGM/Town.wav" type="AudioStream" id=7]
+[ext_resource path="res://Scenes - Players and NPCs/Player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Audio - BGM/BGM BOSS 2.wav" type="AudioStream" id=9]
+[ext_resource path="res://Map/Taman/Kusa_0.png" type="Texture" id=14]
+[ext_resource path="res://Audio - Sound Effect/wave_selesai.wav" type="AudioStream" id=16]
+[ext_resource path="res://Scenes - Props/Spawner.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes - Pickups/weaponPickup.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes - Props/NPCSpawner.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Map/Perkotaan/SideRoadD(Mulus).png" type="Texture" id=22]
+[ext_resource path="res://Map/Perkotaan/Tile_Road.png" type="Texture" id=23]
+[ext_resource path="res://Map/Perkotaan/Road_Strip1.png" type="Texture" id=32]
+[ext_resource path="res://Map/Perkotaan/Road_Strip1b.png" type="Texture" id=35]
+
+[sub_resource type="TileSet" id=1]
+0/name = "Tile_Road.png 0"
+0/texture = ExtResource( 23 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 704, 320 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 1
+0/autotile/bitmask_flags = [ Vector2( 0, 0 ), 432, Vector2( 0, 1 ), 438, Vector2( 0, 2 ), 54, Vector2( 0, 3 ), 48, Vector2( 1, 0 ), 504, Vector2( 1, 1 ), 511, Vector2( 1, 2 ), 63, Vector2( 1, 3 ), 56, Vector2( 2, 0 ), 216, Vector2( 2, 1 ), 219, Vector2( 2, 2 ), 27, Vector2( 2, 3 ), 24, Vector2( 3, 0 ), 144, Vector2( 3, 1 ), 146, Vector2( 3, 2 ), 18, Vector2( 3, 3 ), 16, Vector2( 4, 0 ), 176, Vector2( 4, 1 ), 182, Vector2( 4, 2 ), 434, Vector2( 4, 3 ), 50, Vector2( 4, 4 ), 178, Vector2( 5, 0 ), 248, Vector2( 5, 1 ), 255, Vector2( 5, 2 ), 507, Vector2( 5, 3 ), 59, Vector2( 5, 4 ), 251, Vector2( 6, 0 ), 440, Vector2( 6, 1 ), 447, Vector2( 6, 2 ), 510, Vector2( 6, 3 ), 62, Vector2( 6, 4 ), 446, Vector2( 7, 0 ), 152, Vector2( 7, 1 ), 155, Vector2( 7, 2 ), 218, Vector2( 7, 3 ), 26, Vector2( 7, 4 ), 154, Vector2( 8, 0 ), 184, Vector2( 8, 1 ), 191, Vector2( 8, 2 ), 506, Vector2( 8, 3 ), 58, Vector2( 8, 4 ), 186, Vector2( 9, 0 ), 443, Vector2( 9, 1 ), 254, Vector2( 9, 2 ), 442, Vector2( 9, 3 ), 190, Vector2( 10, 2 ), 250, Vector2( 10, 3 ), 187 ]
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 64, 64 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="TileSet" id=2]
+0/name = "Road_Strip1.png 0"
+0/texture = ExtResource( 32 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 32 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 0
+0/autotile/bitmask_flags = [  ]
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 32, 32 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="TileSet" id=3]
+0/name = "Road_Strip1.png 0"
+0/texture = ExtResource( 32 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 32 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 0
+0/autotile/bitmask_flags = [  ]
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 32, 32 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[node name="Root" type="Node2D"]
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Map_Housing" type="Sprite" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Kusa_0" type="Sprite" parent="Map_Housing"]
+position = Vector2( 477.906, 231.474 )
+scale = Vector2( 87.98, 50.9467 )
+texture = ExtResource( 14 )
+
+[node name="Road" type="TileMap" parent="Map_Housing"]
+tile_set = SubResource( 1 )
+format = 1
+tile_data = PoolIntArray( -655353, 0, 196611, -196623, 0, 0, -196622, 0, 1, -196621, 0, 1, -196620, 0, 1, -196619, 0, 1, -196618, 0, 1, -196617, 0, 1, -196616, 0, 1, -196615, 0, 1, -196614, 0, 1, -196613, 0, 1, -196612, 0, 1, -196611, 0, 1, -196610, 0, 1, -196609, 0, 1, -262144, 0, 1, -262143, 0, 1, -262142, 0, 1, -262141, 0, 1, -262140, 0, 1, -262139, 0, 1, -262138, 0, 1, -262137, 0, 1, -262136, 0, 1, -262135, 0, 1, -262134, 0, 1, -262133, 0, 1, -262132, 0, 1, -262131, 0, 1, -262130, 0, 1, -262129, 0, 1, -262128, 0, 1, -262127, 0, 1, -262126, 0, 1, -262125, 0, 1, -262124, 0, 1, -262123, 0, 1, -262122, 0, 1, -262121, 0, 1, -262120, 0, 1, -262119, 0, 1, -262118, 0, 1, -262117, 0, 1, -262116, 0, 1, -262115, 0, 2, -131087, 0, 65536, -131086, 0, 65537, -131085, 0, 65537, -131084, 0, 65537, -131083, 0, 65537, -131082, 0, 65537, -131081, 0, 65537, -131080, 0, 65537, -131079, 0, 65537, -131078, 0, 65537, -131077, 0, 65537, -131076, 0, 65537, -131075, 0, 65537, -131074, 0, 65537, -131073, 0, 65537, -196608, 0, 65537, -196607, 0, 65537, -196606, 0, 65537, -196605, 0, 65537, -196604, 0, 65537, -196603, 0, 65537, -196602, 0, 65537, -196601, 0, 65537, -196600, 0, 65537, -196599, 0, 65537, -196598, 0, 65537, -196597, 0, 65537, -196596, 0, 65537, -196595, 0, 65537, -196594, 0, 65537, -196593, 0, 65537, -196592, 0, 65537, -196591, 0, 65537, -196590, 0, 65537, -196589, 0, 65537, -196588, 0, 65537, -196587, 0, 65537, -196586, 0, 65537, -196585, 0, 65537, -196584, 0, 65537, -196583, 0, 65537, -196582, 0, 65537, -196581, 0, 65537, -196580, 0, 65537, -196579, 0, 65538, -65551, 0, 65536, -65550, 0, 65537, -65549, 0, 65541, -65548, 0, 131073, -65547, 0, 131073, -65546, 0, 131073, -65545, 0, 131073, -65544, 0, 131073, -65543, 0, 131073, -65542, 0, 131073, -65541, 0, 131073, -65540, 0, 131073, -65539, 0, 131073, -65538, 0, 131073, -65537, 0, 131073, -131072, 0, 131073, -131071, 0, 131073, -131070, 0, 131073, -131069, 0, 131073, -131068, 0, 131073, -131067, 0, 131073, -131066, 0, 131073, -131065, 0, 131073, -131064, 0, 131073, -131063, 0, 131073, -131062, 0, 131073, -131061, 0, 131073, -131060, 0, 65542, -131059, 0, 65537, -131058, 0, 65541, -131057, 0, 131073, -131056, 0, 131073, -131055, 0, 131073, -131054, 0, 131073, -131053, 0, 131073, -131052, 0, 131073, -131051, 0, 131073, -131050, 0, 131073, -131049, 0, 131073, -131048, 0, 131073, -131047, 0, 131073, -131046, 0, 131073, -131045, 0, 131073, -131044, 0, 131073, -131043, 0, 131074, -15, 0, 65536, -14, 0, 65537, -13, 0, 65538, -65524, 0, 65536, -65523, 0, 65537, -65522, 0, 65538, 65521, 0, 65536, 65522, 0, 65537, 65523, 0, 65538, 12, 0, 65536, 13, 0, 65537, 14, 0, 65538, 131057, 0, 65536, 131058, 0, 65537, 131059, 0, 65538, 65548, 0, 65536, 65549, 0, 65537, 65550, 0, 65538, 196593, 0, 65536, 196594, 0, 65537, 196595, 0, 65538, 131084, 0, 65536, 131085, 0, 65537, 131086, 0, 65538, 262129, 0, 65536, 262130, 0, 65537, 262131, 0, 65538, 196620, 0, 65536, 196621, 0, 65537, 196622, 0, 65538, 327665, 0, 65536, 327666, 0, 65537, 327667, 0, 131077, 327668, 0, 1, 327669, 0, 1, 327670, 0, 1, 327671, 0, 1, 327672, 0, 1, 327673, 0, 1, 327674, 0, 1, 327675, 0, 1, 327676, 0, 1, 327677, 0, 1, 327678, 0, 1, 327679, 0, 1, 262144, 0, 1, 262145, 0, 1, 262146, 0, 1, 262147, 0, 1, 262148, 0, 1, 262149, 0, 1, 262150, 0, 1, 262151, 0, 1, 262152, 0, 1, 262153, 0, 1, 262154, 0, 1, 262155, 0, 1, 262156, 0, 131078, 262157, 0, 65537, 262158, 0, 131077, 262159, 0, 1, 262160, 0, 1, 262161, 0, 1, 262162, 0, 1, 262163, 0, 1, 262164, 0, 1, 262165, 0, 1, 262166, 0, 1, 262167, 0, 1, 262168, 0, 1, 262169, 0, 1, 262170, 0, 1, 262171, 0, 1, 262172, 0, 1, 262173, 0, 2, 393201, 0, 65536, 393202, 0, 65537, 393203, 0, 65537, 393204, 0, 65537, 393205, 0, 65537, 393206, 0, 65537, 393207, 0, 65537, 393208, 0, 65537, 393209, 0, 65537, 393210, 0, 65537, 393211, 0, 65537, 393212, 0, 65537, 393213, 0, 65537, 393214, 0, 65537, 393215, 0, 65537, 327680, 0, 65537, 327681, 0, 65537, 327682, 0, 65537, 327683, 0, 65537, 327684, 0, 65537, 327685, 0, 65537, 327686, 0, 65537, 327687, 0, 65537, 327688, 0, 65537, 327689, 0, 65537, 327690, 0, 65537, 327691, 0, 65537, 327692, 0, 65537, 327693, 0, 65537, 327694, 0, 65537, 327695, 0, 65537, 327696, 0, 65537, 327697, 0, 65537, 327698, 0, 65537, 327699, 0, 65537, 327700, 0, 65537, 327701, 0, 65537, 327702, 0, 65537, 327703, 0, 65537, 327704, 0, 65537, 327705, 0, 65537, 327706, 0, 65537, 327707, 0, 65537, 327708, 0, 65537, 327709, 0, 65538, 458737, 0, 131072, 458738, 0, 131073, 458739, 0, 131073, 458740, 0, 131073, 458741, 0, 131073, 458742, 0, 131073, 458743, 0, 131073, 458744, 0, 131073, 458745, 0, 131073, 458746, 0, 131073, 458747, 0, 65542, 458748, 0, 65537, 458749, 0, 65541, 458750, 0, 131073, 458751, 0, 131073, 393216, 0, 131073, 393217, 0, 131073, 393218, 0, 131073, 393219, 0, 131073, 393220, 0, 131073, 393221, 0, 131073, 393222, 0, 131073, 393223, 0, 131073, 393224, 0, 131073, 393225, 0, 131073, 393226, 0, 131073, 393227, 0, 131073, 393228, 0, 131073, 393229, 0, 131073, 393230, 0, 131073, 393231, 0, 131073, 393232, 0, 131073, 393233, 0, 131073, 393234, 0, 131073, 393235, 0, 131073, 393236, 0, 131073, 393237, 0, 131073, 393238, 0, 131073, 393239, 0, 131073, 393240, 0, 131073, 393241, 0, 131073, 393242, 0, 131073, 393243, 0, 65542, 393244, 0, 65537, 393245, 0, 65538, 524283, 0, 65536, 524284, 0, 65537, 524285, 0, 65538, 458779, 0, 65536, 458780, 0, 65537, 458781, 0, 65538, 589819, 0, 65536, 589820, 0, 65537, 589821, 0, 65538, 524315, 0, 65536, 524316, 0, 65537, 524317, 0, 65538, 655355, 0, 65536, 655356, 0, 65537, 655357, 0, 65538, 589851, 0, 65536, 589852, 0, 65537, 589853, 0, 65538, 720891, 0, 65536, 720892, 0, 65537, 720893, 0, 65538, 655387, 0, 65536, 655388, 0, 65537, 655389, 0, 65538, 786427, 0, 65536, 786428, 0, 65537, 786429, 0, 65538, 720923, 0, 65536, 720924, 0, 65537, 720925, 0, 65538, 851963, 0, 65536, 851964, 0, 65537, 851965, 0, 65538, 786459, 0, 65536, 786460, 0, 65537, 786461, 0, 65538, 917489, 0, 0, 917490, 0, 1, 917491, 0, 1, 917492, 0, 1, 917493, 0, 1, 917494, 0, 1, 917495, 0, 1, 917496, 0, 1, 917497, 0, 1, 917498, 0, 1, 917499, 0, 131078, 917500, 0, 65537, 917501, 0, 131077, 917502, 0, 1, 917503, 0, 1, 851968, 0, 1, 851969, 0, 1, 851970, 0, 1, 851971, 0, 1, 851972, 0, 1, 851973, 0, 1, 851974, 0, 1, 851975, 0, 1, 851976, 0, 1, 851977, 0, 1, 851978, 0, 1, 851979, 0, 1, 851980, 0, 1, 851981, 0, 1, 851982, 0, 1, 851983, 0, 1, 851984, 0, 1, 851985, 0, 1, 851986, 0, 1, 851987, 0, 1, 851988, 0, 1, 851989, 0, 1, 851990, 0, 1, 851991, 0, 1, 851992, 0, 1, 851993, 0, 1, 851994, 0, 1, 851995, 0, 131078, 851996, 0, 65537, 851997, 0, 65538, 983025, 0, 65536, 983026, 0, 65537, 983027, 0, 65537, 983028, 0, 65537, 983029, 0, 65537, 983030, 0, 65537, 983031, 0, 65537, 983032, 0, 65537, 983033, 0, 65537, 983034, 0, 65537, 983035, 0, 65537, 983036, 0, 65537, 983037, 0, 65537, 983038, 0, 65537, 983039, 0, 65537, 917504, 0, 65537, 917505, 0, 65537, 917506, 0, 65537, 917507, 0, 65537, 917508, 0, 65537, 917509, 0, 65537, 917510, 0, 65537, 917511, 0, 65537, 917512, 0, 65537, 917513, 0, 65537, 917514, 0, 65537, 917515, 0, 65537, 917516, 0, 65537, 917517, 0, 65537, 917518, 0, 65537, 917519, 0, 65537, 917520, 0, 65537, 917521, 0, 65537, 917522, 0, 65537, 917523, 0, 65537, 917524, 0, 65537, 917525, 0, 65537, 917526, 0, 65537, 917527, 0, 65537, 917528, 0, 65537, 917529, 0, 65537, 917530, 0, 65537, 917531, 0, 65537, 917532, 0, 65537, 917533, 0, 65538, 1048561, 0, 131072, 1048562, 0, 131073, 1048563, 0, 131073, 1048564, 0, 131073, 1048565, 0, 131073, 1048566, 0, 131073, 1048567, 0, 131073, 1048568, 0, 131073, 1048569, 0, 131073, 1048570, 0, 131073, 1048571, 0, 131073, 1048572, 0, 131073, 1048573, 0, 131073, 1048574, 0, 131073, 1048575, 0, 131073, 983040, 0, 131073, 983041, 0, 131073, 983042, 0, 131073, 983043, 0, 131073, 983044, 0, 131073, 983045, 0, 131073, 983046, 0, 131073, 983047, 0, 131073, 983048, 0, 131073, 983049, 0, 131073, 983050, 0, 131073, 983051, 0, 131073, 983052, 0, 131073, 983053, 0, 131073, 983054, 0, 131073, 983055, 0, 131073, 983056, 0, 131073, 983057, 0, 131073, 983058, 0, 131073, 983059, 0, 131073, 983060, 0, 131073, 983061, 0, 131073, 983062, 0, 131073, 983063, 0, 131073, 983064, 0, 131073, 983065, 0, 131073, 983066, 0, 131073, 983067, 0, 131073, 983068, 0, 131073, 983069, 0, 131074 )
+
+[node name="RoadStrip" type="TileMap" parent="Map_Housing"]
+scale = Vector2( 2, 2 )
+tile_set = SubResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -14, 0, 0, 131058, 0, 0, 262130, 0, 0, 458780, 0, 0, 786460, 0, 0 )
+
+[node name="RS2" type="TileMap" parent="Map_Housing/RoadStrip"]
+rotation = 1.5708
+tile_set = SubResource( 3 )
+cell_size = Vector2( 32, 32 )
+cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+format = 1
+tile_data = PoolIntArray( -1900547, 0, 0, -1769475, 0, 0, -1769467, 0, 0, -1769458, 0, 0, -1638403, 0, 0, -1638395, 0, 0, -1638386, 0, 0, -1507331, 0, 0, -1507323, 0, 0, -1507314, 0, 0, -1376259, 0, 0, -1376251, 0, 0, -1376242, 0, 0, -1245187, 0, 0, -1310713, 0, 0, -1245179, 0, 0, -1245170, 0, 0, -1114115, 0, 0, -1114107, 0, 0, -1114098, 0, 0, -983043, 0, 0, -983035, 0, 0, -983026, 0, 0, -851971, 0, 0, -851963, 0, 0, -851954, 0, 0, -720899, 0, 0, -720891, 0, 0, -720882, 0, 0, -589827, 0, 0, -589819, 0, 0, -589810, 0, 0, -458755, 0, 0, -458747, 0, 0, -458738, 0, 0, -327683, 0, 0, -327675, 0, 0, -327666, 0, 0, -196611, 0, 0, -196603, 0, 0, -196594, 0, 0, -65539, 0, 0, -65531, 0, 0, -65522, 0, 0, 65533, 0, 0, 65541, 0, 0, 65550, 0, 0, 196605, 0, 0, 196613, 0, 0, 196622, 0, 0, 327677, 0, 0, 327685, 0, 0, 327694, 0, 0, 458749, 0, 0, 458757, 0, 0, 458766, 0, 0, 655357, 0, 0, 589829, 0, 0, 589838, 0, 0, 786429, 0, 0, 720901, 0, 0, 720910, 0, 0, 851982, 0, 0 )
+
+[node name="Road_Strip1b" type="Sprite" parent="Map_Housing/RoadStrip"]
+position = Vector2( -434.839, -76.5876 )
+texture = ExtResource( 35 )
+
+[node name="Road_Strip1b2" type="Sprite" parent="Map_Housing/RoadStrip"]
+position = Vector2( 908.095, 176.159 )
+rotation = -4.71239
+texture = ExtResource( 35 )
+
+[node name="Road_Strip1b3" type="Sprite" parent="Map_Housing/RoadStrip"]
+position = Vector2( -427.354, 175.151 )
+rotation = -1.5708
+texture = ExtResource( 35 )
+
+[node name="Road_Strip1b4" type="Sprite" parent="Map_Housing/RoadStrip"]
+position = Vector2( 911.646, 459.823 )
+rotation = 3.14159
+texture = ExtResource( 35 )
+
+[node name="Road_Strip1" type="Sprite" parent="Map_Housing/RoadStrip"]
+position = Vector2( 913, 321 )
+texture = ExtResource( 32 )
+
+[node name="Rumah" type="YSort" parent="Map_Housing"]
+position = Vector2( 477.906, 231.474 )
+scale = Vector2( 87.98, 50.9467 )
+
+[node name="Level" type="YSort" parent="."]
+
+[node name="Spawner1" parent="Level" instance=ExtResource( 17 )]
+position = Vector2( -856, -160 )
+
+[node name="Spawner2" parent="Level" instance=ExtResource( 17 )]
+position = Vector2( 856, 96 )
+
+[node name="Spawner3" parent="Level" instance=ExtResource( 17 )]
+position = Vector2( 1808, 936 )
+
+[node name="Spawner4" parent="Level" instance=ExtResource( 17 )]
+position = Vector2( -216, 648 )
+
+[node name="Player" parent="Level" instance=ExtResource( 8 )]
+position = Vector2( 864, 232 )
+collision_layer = 2147483683
+
+[node name="NPCSpawner1" parent="Level" instance=ExtResource( 19 )]
+position = Vector2( -448, -304 )
+
+[node name="NPCSpawner2" parent="Level" instance=ExtResource( 19 )]
+position = Vector2( 920, 800 )
+
+[node name="NPCSpawner3" parent="Level" instance=ExtResource( 19 )]
+position = Vector2( 344, 240 )
+
+[node name="NPCSpawner4" parent="Level" instance=ExtResource( 19 )]
+position = Vector2( 1120, -304 )
+
+[node name="weaponPickup" parent="Level" instance=ExtResource( 18 )]
+position = Vector2( 816, 320 )
+
+[node name="armorPickup" parent="Level" instance=ExtResource( 3 )]
+position = Vector2( 904, 320 )
+
+[node name="rumah_atas" type="Node2D" parent="Level"]
+position = Vector2( 461, -450 )
+scale = Vector2( 87.98, 50.9467 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="SideRoadD(Mulus)" type="Sprite" parent="Level/rumah_atas"]
+position = Vector2( -13.4362, 2.72854 )
+scale = Vector2( 0.033053, 0.0714888 )
+texture = ExtResource( 22 )
+
+[node name="SideRoadD(Mulus)" type="Sprite" parent="Level/rumah_atas/SideRoadD(Mulus)"]
+position = Vector2( 98, 0 )
+texture = ExtResource( 22 )
+
+[node name="SideRoadD(Mulus)" type="Sprite" parent="Level/rumah_atas/SideRoadD(Mulus)/SideRoadD(Mulus)"]
+position = Vector2( 98, 0 )
+texture = ExtResource( 22 )
+
+[node name="SideRoadD(Mulus)" type="Sprite" parent="Level/rumah_atas/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)"]
+position = Vector2( 98, 0 )
+texture = ExtResource( 22 )
+
+[node name="SideRoadD(Mulus)" type="Sprite" parent="Level/rumah_atas/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)"]
+position = Vector2( 98, 0 )
+texture = ExtResource( 22 )
+
+[node name="SideRoadD(Mulus)" type="Sprite" parent="Level/rumah_atas/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)"]
+position = Vector2( 100, 0 )
+texture = ExtResource( 22 )
+
+[node name="SideRoadD(Mulus)" type="Sprite" parent="Level/rumah_atas/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)"]
+position = Vector2( 98, 0 )
+texture = ExtResource( 22 )
+
+[node name="SideRoadD(Mulus)" type="Sprite" parent="Level/rumah_atas/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)"]
+position = Vector2( 98, 0 )
+texture = ExtResource( 22 )
+
+[node name="SideRoadD(Mulus)" type="Sprite" parent="Level/rumah_atas/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)"]
+position = Vector2( 98, 0 )
+texture = ExtResource( 22 )
+
+[node name="SideRoadD(Mulus)" type="Sprite" parent="Level/rumah_atas/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)"]
+position = Vector2( 98, 0 )
+texture = ExtResource( 22 )
+
+[node name="rumahProp" parent="Level/rumah_atas" instance=ExtResource( 2 )]
+position = Vector2( -14.366, -1.2742 )
+scale = Vector2( 0.017, 0.029 )
+
+[node name="rumahProp2" parent="Level/rumah_atas" instance=ExtResource( 2 )]
+position = Vector2( -11.1606, -1.2742 )
+scale = Vector2( 0.017, 0.029 )
+
+[node name="rumahProp3" parent="Level/rumah_atas" instance=ExtResource( 2 )]
+position = Vector2( -7.97803, -1.2742 )
+scale = Vector2( 0.017, 0.029 )
+
+[node name="rumahProp4" parent="Level/rumah_atas" instance=ExtResource( 2 )]
+position = Vector2( -4.70456, -1.2742 )
+scale = Vector2( 0.017, 0.029 )
+
+[node name="rumahProp5" parent="Level/rumah_atas" instance=ExtResource( 2 )]
+position = Vector2( -1.43108, -1.2742 )
+scale = Vector2( 0.017, 0.029 )
+
+[node name="rumahProp6" parent="Level/rumah_atas" instance=ExtResource( 2 )]
+position = Vector2( 1.75146, -1.2742 )
+scale = Vector2( 0.017, 0.029 )
+
+[node name="rumahProp7" parent="Level/rumah_atas" instance=ExtResource( 2 )]
+position = Vector2( 4.93396, -1.2742 )
+scale = Vector2( 0.017, 0.029 )
+
+[node name="rumahProp8" parent="Level/rumah_atas" instance=ExtResource( 2 )]
+position = Vector2( 8.20746, -1.2742 )
+scale = Vector2( 0.017, 0.029 )
+
+[node name="rumahProp9" parent="Level/rumah_atas" instance=ExtResource( 2 )]
+position = Vector2( 11.4809, -1.2742 )
+scale = Vector2( 0.017, 0.029 )
+
+[node name="rumahProp10" parent="Level/rumah_atas" instance=ExtResource( 2 )]
+position = Vector2( 14.7544, -1.2742 )
+scale = Vector2( 0.017, 0.029 )
+
+[node name="rumah_tengah" type="Node2D" parent="Level"]
+position = Vector2( 462, 131 )
+scale = Vector2( 87.98, 50.9467 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="SideRoadD(Mulus)" type="Sprite" parent="Level/rumah_tengah"]
+position = Vector2( -10.9382, 1.53549 )
+scale = Vector2( 0.0340986, 0.058885 )
+texture = ExtResource( 22 )
+
+[node name="SideRoadD(Mulus)" type="Sprite" parent="Level/rumah_tengah/SideRoadD(Mulus)"]
+position = Vector2( 95, 0 )
+texture = ExtResource( 22 )
+
+[node name="SideRoadD(Mulus)" type="Sprite" parent="Level/rumah_tengah/SideRoadD(Mulus)/SideRoadD(Mulus)"]
+position = Vector2( 95, 0 )
+texture = ExtResource( 22 )
+
+[node name="SideRoadD(Mulus)" type="Sprite" parent="Level/rumah_tengah/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)"]
+position = Vector2( 95, 0 )
+texture = ExtResource( 22 )
+
+[node name="SideRoadD(Mulus)" type="Sprite" parent="Level/rumah_tengah/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)"]
+position = Vector2( 95, 0 )
+texture = ExtResource( 22 )
+
+[node name="SideRoadD(Mulus)" type="Sprite" parent="Level/rumah_tengah/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)"]
+position = Vector2( 200, 0 )
+texture = ExtResource( 22 )
+
+[node name="SideRoadD(Mulus)" type="Sprite" parent="Level/rumah_tengah/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)"]
+position = Vector2( 95, 0 )
+texture = ExtResource( 22 )
+
+[node name="SideRoadD(Mulus)" type="Sprite" parent="Level/rumah_tengah/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)"]
+position = Vector2( 95, 0 )
+texture = ExtResource( 22 )
+
+[node name="rumahProp" parent="Level/rumah_tengah" instance=ExtResource( 2 )]
+position = Vector2( -11.888, -1.16735 )
+scale = Vector2( 0.017, 0.029 )
+
+[node name="rumahProp2" parent="Level/rumah_tengah" instance=ExtResource( 2 )]
+position = Vector2( -8.62589, -1.16735 )
+scale = Vector2( 0.017, 0.029 )
+
+[node name="rumahProp3" parent="Level/rumah_tengah" instance=ExtResource( 2 )]
+position = Vector2( -5.36378, -1.16735 )
+scale = Vector2( 0.017, 0.029 )
+
+[node name="rumahProp4" parent="Level/rumah_tengah" instance=ExtResource( 2 )]
+position = Vector2( -2.09032, -1.16735 )
+scale = Vector2( 0.017, 0.029 )
+
+[node name="rumahProp5" parent="Level/rumah_tengah" instance=ExtResource( 2 )]
+position = Vector2( 1.17184, -1.16735 )
+scale = Vector2( 0.017, 0.029 )
+
+[node name="rumahProp6" parent="Level/rumah_tengah" instance=ExtResource( 2 )]
+position = Vector2( 7.93469, -1.16735 )
+scale = Vector2( 0.017, 0.029 )
+
+[node name="rumahProp7" parent="Level/rumah_tengah" instance=ExtResource( 2 )]
+position = Vector2( 11.1172, -1.16735 )
+scale = Vector2( 0.017, 0.029 )
+
+[node name="rumahProp8" parent="Level/rumah_tengah" instance=ExtResource( 2 )]
+position = Vector2( 14.3907, -1.16735 )
+scale = Vector2( 0.017, 0.029 )
+
+[node name="rumah_bawah" type="Node2D" parent="Level"]
+position = Vector2( 298, 632 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="SideRoadD(Mulus)" type="Sprite" parent="Level/rumah_bawah"]
+position = Vector2( -1032.58, 144.337 )
+scale = Vector2( 2.99999, 3.49999 )
+texture = ExtResource( 22 )
+
+[node name="SideRoadD(Mulus)" type="Sprite" parent="Level/rumah_bawah/SideRoadD(Mulus)"]
+position = Vector2( 95, 0 )
+texture = ExtResource( 22 )
+
+[node name="SideRoadD(Mulus)" type="Sprite" parent="Level/rumah_bawah/SideRoadD(Mulus)/SideRoadD(Mulus)"]
+position = Vector2( 210, 0 )
+texture = ExtResource( 22 )
+
+[node name="SideRoadD(Mulus)" type="Sprite" parent="Level/rumah_bawah/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)"]
+position = Vector2( 95, 0 )
+texture = ExtResource( 22 )
+
+[node name="SideRoadD(Mulus)" type="Sprite" parent="Level/rumah_bawah/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)"]
+position = Vector2( 95, 0 )
+texture = ExtResource( 22 )
+
+[node name="SideRoadD(Mulus)" type="Sprite" parent="Level/rumah_bawah/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)"]
+position = Vector2( 95, 0 )
+texture = ExtResource( 22 )
+
+[node name="SideRoadD(Mulus)" type="Sprite" parent="Level/rumah_bawah/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)"]
+position = Vector2( 95, 0 )
+texture = ExtResource( 22 )
+
+[node name="SideRoadD(Mulus)" type="Sprite" parent="Level/rumah_bawah/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)/SideRoadD(Mulus)"]
+position = Vector2( 95, 0 )
+texture = ExtResource( 22 )
+
+[node name="rumahProp" parent="Level/rumah_bawah" instance=ExtResource( 2 )]
+position = Vector2( -1120, -24 )
+scale = Vector2( 1.49566, 1.47745 )
+
+[node name="rumahProp2" parent="Level/rumah_bawah" instance=ExtResource( 2 )]
+position = Vector2( -832, -24 )
+scale = Vector2( 1.49566, 1.47745 )
+
+[node name="rumahProp3" parent="Level/rumah_bawah" instance=ExtResource( 2 )]
+position = Vector2( -200, -24 )
+scale = Vector2( 1.49566, 1.47745 )
+
+[node name="rumahProp4" parent="Level/rumah_bawah" instance=ExtResource( 2 )]
+position = Vector2( 80, -24 )
+scale = Vector2( 1.49566, 1.47745 )
+
+[node name="rumahProp5" parent="Level/rumah_bawah" instance=ExtResource( 2 )]
+position = Vector2( 368, -24 )
+scale = Vector2( 1.49566, 1.47745 )
+
+[node name="rumahProp6" parent="Level/rumah_bawah" instance=ExtResource( 2 )]
+position = Vector2( 656, -24 )
+scale = Vector2( 1.49566, 1.47745 )
+
+[node name="rumahProp7" parent="Level/rumah_bawah" instance=ExtResource( 2 )]
+position = Vector2( 944, -24 )
+scale = Vector2( 1.49566, 1.47745 )
+
+[node name="rumahProp8" parent="Level/rumah_bawah" instance=ExtResource( 2 )]
+position = Vector2( 1224, -32 )
+scale = Vector2( 1.49566, 1.47745 )
+
+[node name="bossSpawner" parent="Level" instance=ExtResource( 5 )]
+position = Vector2( -224, 360 )
+
+[node name="GUI" parent="." instance=ExtResource( 1 )]
+
+[node name="Audio" type="Node2D" parent="."]
+
+[node name="WaveClear" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 16 )
+volume_db = -25.0
+
+[node name="BGM" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 7 )
+volume_db = -35.0
+autoplay = true
+
+[node name="BGM_boss" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 9 )
+volume_db = -25.0
+
+[node name="Borders" type="Node2D" parent="."]
+
+[node name="Border" parent="Borders" instance=ExtResource( 6 )]
+position = Vector2( 480, 1032 )
+
+[node name="Border2" parent="Borders" instance=ExtResource( 6 )]
+position = Vector2( -960, 272 )
+rotation = 1.5708
+
+[node name="Border3" parent="Borders" instance=ExtResource( 6 )]
+position = Vector2( 1888, 312 )
+rotation = 1.5708
+[connection signal="finished" from="Audio/BGM" to="." method="_on_BGM_finished"]
+[connection signal="finished" from="Audio/BGM_boss" to="." method="_on_BGM_boss_finished"]

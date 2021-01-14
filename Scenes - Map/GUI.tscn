@@ -1,0 +1,717 @@
+[gd_scene load_steps=81 format=2]
+
+[ext_resource path="res://Weapons/Senjata.png" type="Texture" id=1]
+[ext_resource path="res://Weapons/shotgun.png" type="Texture" id=2]
+[ext_resource path="res://Weapons/machine gun.png" type="Texture" id=3]
+[ext_resource path="res://GUI/healthBarFull.png" type="Texture" id=4]
+[ext_resource path="res://GUI/shieldBarKosong.png" type="Texture" id=5]
+[ext_resource path="res://GUI/healthBarKosong.png" type="Texture" id=6]
+[ext_resource path="res://Pickups/fastboot.png" type="Texture" id=7]
+[ext_resource path="res://GUI/shieldBarFull.png" type="Texture" id=8]
+[ext_resource path="res://Weapons/Pistol.png" type="Texture" id=9]
+[ext_resource path="res://Lainnya/wave cleared sprite.png" type="Texture" id=10]
+[ext_resource path="res://GUI/Blank.png" type="Texture" id=11]
+[ext_resource path="res://Scenes - Map/GUI.gd" type="Script" id=12]
+[ext_resource path="res://Pickups/doublescore.png" type="Texture" id=13]
+[ext_resource path="res://Weapons/hand sani (bom).png" type="Texture" id=14]
+[ext_resource path="res://Scenes - Map/WaveClear.gd" type="Script" id=15]
+[ext_resource path="res://GUI/ARCADECLASSIC.TTF" type="DynamicFontData" id=16]
+[ext_resource path="res://Pickups/Cuci Tangan.png" type="Texture" id=17]
+[ext_resource path="res://Pickups/armor.png" type="Texture" id=18]
+[ext_resource path="res://GUI/transisi masuk.png" type="Texture" id=19]
+[ext_resource path="res://GUI/Pause.png" type="Texture" id=20]
+[ext_resource path="res://Scenes - Map/Pause.gd" type="Script" id=21]
+[ext_resource path="res://GUI/aim2.png" type="Texture" id=22]
+[ext_resource path="res://GUI/aim3.png" type="Texture" id=23]
+[ext_resource path="res://GUI/aim1.png" type="Texture" id=24]
+[ext_resource path="res://GUI/aim4.png" type="Texture" id=25]
+[ext_resource path="res://GUI/square.png" type="Texture" id=26]
+[ext_resource path="res://GUI/Home.png" type="Texture" id=27]
+[ext_resource path="res://GUI/Start.png" type="Texture" id=28]
+[ext_resource path="res://GUI/healthBarBoss_Kosong.png" type="Texture" id=29]
+[ext_resource path="res://GUI/bar_progressdefault.png" type="Texture" id=30]
+[ext_resource path="res://MainMenu/BlankButton_hover.png" type="Texture" id=31]
+[ext_resource path="res://MainMenu/BlankButton_pressed.png" type="Texture" id=32]
+[ext_resource path="res://MainMenu/BlankButton.png" type="Texture" id=33]
+[ext_resource path="res://Scenes - Map/Tutorials.gd" type="Script" id=34]
+[ext_resource path="res://GUI/Tutorial/tutorial_combined_wasd.png" type="Texture" id=35]
+[ext_resource path="res://GUI/Tutorial/tutorial_combined_mouse.png" type="Texture" id=36]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 0, 0, 853, 480 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 853, 0, 853, 480 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 1706, 0, 853, 480 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 2559, 0, 853, 480 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 3412, 0, 853, 480 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 0, 480, 853, 480 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 853, 480, 853, 480 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 1706, 480, 853, 480 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 2559, 480, 853, 480 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 3412, 480, 853, 480 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 0, 960, 853, 480 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 853, 960, 853, 480 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 1706, 960, 853, 480 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 2559, 960, 853, 480 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 3412, 960, 853, 480 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 0, 1440, 853, 480 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 853, 1440, 853, 480 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 1706, 1440, 853, 480 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 2559, 1440, 853, 480 )
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 3412, 1440, 853, 480 )
+
+[sub_resource type="SpriteFrames" id=21]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
+"loop": false,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="DynamicFont" id=22]
+size = 24
+font_data = ExtResource( 16 )
+
+[sub_resource type="DynamicFont" id=23]
+size = 24
+font_data = ExtResource( 16 )
+
+[sub_resource type="DynamicFont" id=24]
+size = 24
+font_data = ExtResource( 16 )
+
+[sub_resource type="DynamicFont" id=25]
+size = 24
+font_data = ExtResource( 16 )
+
+[sub_resource type="DynamicFont" id=26]
+size = 24
+font_data = ExtResource( 16 )
+
+[sub_resource type="SpriteFrames" id=27]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=28]
+size = 24
+font_data = ExtResource( 16 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 1200, 900 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 19 )
+region = Rect2( 1200, 0, 1200, 900 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 19 )
+region = Rect2( 2400, 0, 1200, 900 )
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 19 )
+region = Rect2( 3600, 0, 1200, 900 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 19 )
+region = Rect2( 4800, 0, 1200, 900 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 19 )
+region = Rect2( 6000, 0, 1200, 900 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 19 )
+region = Rect2( 7200, 0, 1200, 900 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 19 )
+region = Rect2( 8400, 0, 1200, 900 )
+
+[sub_resource type="SpriteFrames" id=37]
+animations = [ {
+"frames": [ null, SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ) ],
+"loop": false,
+"name": "default",
+"speed": 9.0
+} ]
+
+[sub_resource type="SpriteFrames" id=38]
+animations = [ {
+"frames": [ ExtResource( 22 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=39]
+size = 20
+font_data = ExtResource( 16 )
+
+[sub_resource type="DynamicFont" id=40]
+size = 48
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 16 )
+
+[sub_resource type="DynamicFont" id=41]
+size = 18
+font_data = ExtResource( 16 )
+
+[sub_resource type="DynamicFont" id=42]
+size = 18
+font_data = ExtResource( 16 )
+
+[sub_resource type="DynamicFont" id=43]
+size = 18
+font_data = ExtResource( 16 )
+
+[sub_resource type="DynamicFont" id=44]
+size = 64
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 16 )
+
+[node name="GUI" type="CanvasLayer"]
+script = ExtResource( 12 )
+
+[node name="WaveClear" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 640, 280 )
+scale = Vector2( 1.49414, 1.5 )
+frames = SubResource( 21 )
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TextureProgress" type="TextureProgress" parent="WaveClear"]
+visible = false
+margin_left = -119.801
+margin_top = 21.3334
+margin_right = 360.199
+margin_bottom = 53.3334
+rect_scale = Vector2( 0.5, 0.25 )
+max_value = 5.0
+step = 0.0
+value = 1.0
+allow_lesser = true
+texture_under = ExtResource( 29 )
+texture_progress = ExtResource( 30 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Container_GUI" type="MarginContainer" parent="."]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 10.0
+margin_bottom = 10.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Container_GUI"]
+margin_right = 320.0
+margin_bottom = 68.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bars" type="VBoxContainer" parent="Container_GUI/HBoxContainer"]
+margin_right = 320.0
+margin_bottom = 68.0
+
+[node name="HP" type="TextureProgress" parent="Container_GUI/HBoxContainer/Bars"]
+margin_right = 320.0
+margin_bottom = 32.0
+max_value = 20.0
+step = 0.0
+texture_under = ExtResource( 6 )
+texture_progress = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Armor" type="TextureProgress" parent="Container_GUI/HBoxContainer/Bars"]
+margin_top = 36.0
+margin_right = 320.0
+margin_bottom = 68.0
+max_value = 10.0
+step = 0.0
+value = 5.0
+texture_under = ExtResource( 5 )
+texture_progress = ExtResource( 8 )
+
+[node name="Node2D" type="Node2D" parent="Container_GUI/HBoxContainer/Bars"]
+position = Vector2( 0, 72 )
+scale = Vector2( 0.1, 0.1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Container_GUI/HBoxContainer/Bars/Node2D"]
+margin_right = 900.0
+margin_bottom = 448.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="doubleScore" type="TextureProgress" parent="Container_GUI/HBoxContainer/Bars/Node2D/HBoxContainer"]
+margin_right = 448.0
+margin_bottom = 448.0
+max_value = 30.0
+step = 0.0
+value = 30.0
+texture_progress = ExtResource( 13 )
+fill_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="haste" type="TextureProgress" parent="Container_GUI/HBoxContainer/Bars/Node2D/HBoxContainer"]
+margin_left = 452.0
+margin_right = 900.0
+margin_bottom = 448.0
+max_value = 15.0
+value = 15.0
+texture_progress = ExtResource( 7 )
+fill_mode = 5
+
+[node name="dd" type="TextureProgress" parent="Container_GUI/HBoxContainer/Bars/Node2D/HBoxContainer"]
+margin_left = 904.0
+margin_right = 1352.0
+margin_bottom = 448.0
+max_value = 15.0
+value = 15.0
+texture_progress = ExtResource( 17 )
+fill_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="invinc" type="TextureProgress" parent="Container_GUI/HBoxContainer/Bars/Node2D/HBoxContainer"]
+margin_left = 1356.0
+margin_right = 1804.0
+margin_bottom = 448.0
+max_value = 10.0
+value = 10.0
+texture_progress = ExtResource( 18 )
+fill_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Container_Wave" type="MarginContainer" parent="."]
+margin_left = 560.0
+margin_top = 10.0
+margin_right = 720.0
+margin_bottom = 58.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bg" type="TextureRect" parent="Container_Wave"]
+margin_right = 160.0
+margin_bottom = 48.0
+texture = ExtResource( 11 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Container_Wave/bg"]
+margin_left = 28.0
+margin_top = 11.0
+margin_right = 91.0
+margin_bottom = 37.0
+custom_fonts/font = SubResource( 22 )
+text = "WAVE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="number_wave" type="Label" parent="Container_Wave/bg"]
+margin_left = 104.0
+margin_top = 12.0
+margin_right = 117.0
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 23 )
+text = "1"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Container_Score" type="MarginContainer" parent="."]
+margin_left = 544.0
+margin_top = 672.0
+margin_right = 736.0
+margin_bottom = 720.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bg" type="TextureRect" parent="Container_Score"]
+margin_right = 192.0
+margin_bottom = 48.0
+texture = ExtResource( 11 )
+expand = true
+
+[node name="score" type="Label" parent="Container_Score/bg"]
+margin_left = 24.0
+margin_top = 10.9999
+margin_right = 108.0
+margin_bottom = 36.9999
+custom_fonts/font = SubResource( 24 )
+text = "SCORE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="score_number" type="Label" parent="Container_Score/bg"]
+margin_left = 101.0
+margin_top = 10.9999
+margin_right = 179.0
+margin_bottom = 36.9999
+custom_fonts/font = SubResource( 25 )
+text = "500000"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Container_Weapon" type="MarginContainer" parent="."]
+margin_left = 20.0
+margin_top = 636.0
+margin_right = 84.0
+margin_bottom = 700.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bg_weapon" type="TextureRect" parent="Container_Weapon"]
+margin_right = 64.0
+margin_bottom = 64.0
+texture = ExtResource( 11 )
+expand = true
+
+[node name="ammo" type="Label" parent="Container_Weapon/bg_weapon"]
+margin_left = 12.0
+margin_top = 34.0
+margin_right = 52.0
+margin_bottom = 87.0
+custom_fonts/font = SubResource( 26 )
+text = "100
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="weapon" type="AnimatedSprite" parent="Container_Weapon/bg_weapon"]
+position = Vector2( 31, 21 )
+scale = Vector2( 0.111049, 0.108817 )
+frames = SubResource( 27 )
+frame = 3
+
+[node name="Container_Bombs" type="MarginContainer" parent="."]
+margin_left = 94.0
+margin_top = 636.0
+margin_right = 158.0
+margin_bottom = 700.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bg_bomb" type="TextureRect" parent="Container_Bombs"]
+margin_right = 64.0
+margin_bottom = 64.0
+texture = ExtResource( 11 )
+expand = true
+
+[node name="ammo_bomb" type="Label" parent="Container_Bombs/bg_bomb"]
+margin_left = 13.0
+margin_top = 35.0
+margin_right = 53.0
+margin_bottom = 88.0
+custom_fonts/font = SubResource( 28 )
+text = "5
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Container_Bombs/bg_bomb"]
+margin_left = 16.0
+margin_top = 8.0
+margin_right = 47.0
+margin_bottom = 39.0
+texture = ExtResource( 14 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="changeMap" type="AnimatedSprite" parent="."]
+position = Vector2( 644.46, 359.429 )
+scale = Vector2( 1.0941, 1.08984 )
+frames = SubResource( 37 )
+
+[node name="Container_BossHP" type="VBoxContainer" parent="."]
+margin_left = 400.0
+margin_top = 448.0
+margin_right = 880.0
+margin_bottom = 663.0
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mouseAim" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.75, 0.75 )
+frames = SubResource( 38 )
+
+[node name="Tutorials" type="Node2D" parent="."]
+pause_mode = 2
+visible = false
+position = Vector2( 640, 384 )
+script = ExtResource( 34 )
+
+[node name="background" type="Sprite" parent="Tutorials"]
+position = Vector2( 0, -16 )
+scale = Vector2( 15, 10 )
+texture = ExtResource( 26 )
+
+[node name="tutorial_combined_mouse" type="Sprite" parent="Tutorials/background"]
+position = Vector2( 2.66667, -7.2 )
+scale = Vector2( 0.0333333, 0.05 )
+texture = ExtResource( 36 )
+
+[node name="Sprite" type="Sprite" parent="Tutorials/background"]
+position = Vector2( -3.2, 5.60001 )
+scale = Vector2( 0.0333333, 0.05 )
+texture = ExtResource( 35 )
+
+[node name="close" type="TextureButton" parent="Tutorials"]
+margin_left = -48.0
+margin_top = 74.0
+margin_right = 48.0
+margin_bottom = 106.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
+texture_normal = ExtResource( 33 )
+texture_hover = ExtResource( 31 )
+texture_disabled = ExtResource( 32 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Tutorials/close"]
+margin_left = 4.0
+margin_top = 5.0
+margin_right = 92.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 39 )
+text = "CONTINUE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Tutorials"]
+margin_left = -104.0
+margin_top = -148.0
+margin_right = 104.0
+margin_bottom = -99.0
+custom_fonts/font = SubResource( 40 )
+text = "CONTROLS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Tutorials"]
+margin_left = -136.0
+margin_top = 48.0
+margin_right = -56.0
+margin_bottom = 67.0
+custom_fonts/font = SubResource( 41 )
+text = "MOVEMENT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Tutorials"]
+margin_left = 21.0
+margin_top = 48.0
+margin_right = 71.0
+margin_bottom = 67.0
+custom_fonts/font = SubResource( 42 )
+text = "SHOOT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="Tutorials"]
+margin_left = 108.0
+margin_top = 48.0
+margin_right = 148.0
+margin_bottom = 67.0
+custom_fonts/font = SubResource( 43 )
+text = "BOMB"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pause" type="TextureButton" parent="."]
+pause_mode = 2
+margin_left = 1226.31
+margin_top = 8.69469
+margin_right = 1266.31
+margin_bottom = 48.6947
+focus_mode = 0
+mouse_default_cursor_shape = 2
+action_mode = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 20 )
+expand = true
+script = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseMessage" type="Node2D" parent="Pause"]
+visible = false
+position = Vector2( -586.327, 327.304 )
+
+[node name="PauseMessage" type="Sprite" parent="Pause/PauseMessage"]
+modulate = Color( 1, 1, 1, 0.75 )
+position = Vector2( -2, 0 )
+scale = Vector2( 8.99881, 6.09433 )
+texture = ExtResource( 26 )
+
+[node name="PauseMessage2" type="Label" parent="Pause/PauseMessage"]
+modulate = Color( 0.576471, 0.576471, 0.576471, 1 )
+margin_left = -103.958
+margin_top = -84.3499
+margin_right = 106.042
+margin_bottom = -19.3499
+custom_fonts/font = SubResource( 44 )
+text = "PAUSED"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="keluar" type="TextureButton" parent="Pause/PauseMessage"]
+margin_left = -96.0
+margin_top = -8.0
+margin_right = -32.0
+margin_bottom = 55.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
+texture_normal = ExtResource( 27 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="continue" type="TextureButton" parent="Pause/PauseMessage"]
+margin_left = 32.017
+margin_top = -7.99869
+margin_right = 96.017
+margin_bottom = 56.0013
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
+texture_normal = ExtResource( 28 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="animation_finished" from="WaveClear" to="WaveClear" method="_on_WaveClear_animation_finished"]
+[connection signal="animation_finished" from="changeMap" to="." method="_on_changeMap_animation_finished"]
+[connection signal="button_up" from="Tutorials/close" to="Tutorials" method="_on_close_button_up"]
+[connection signal="pressed" from="Pause" to="Pause" method="_on_Pause_pressed"]
+[connection signal="button_up" from="Pause/PauseMessage/keluar" to="Pause" method="_on_keluar_button_up"]
+[connection signal="button_up" from="Pause/PauseMessage/continue" to="Pause" method="_on_continue_button_up"]
